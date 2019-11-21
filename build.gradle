@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+
+group 'com.campy'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    dependencies{
+
+//        implementation 'org.springframework.boot:spring-boot-starter-web'
+//
+//        annotationProcessor 'org.projectlombok:lombok'
+       // developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    }
+}
+subprojects {
+    apply plugin: 'spring-boot'
+
+//    repositories {
+//        jcenter()
+//        mavenCentral()
+//    }
+    dependencies{
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.8.RELEASE'
+//        compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.1.8.RELEASE'
+//        providedCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+   }
+}
+
